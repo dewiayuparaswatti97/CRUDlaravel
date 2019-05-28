@@ -20,7 +20,7 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ route('books.store') }}">
+      <form method="post" action="{{ route('crudlaravel.store') }}">
       {{ csrf_field() }}
           <div class="form-group">
               <label for="name">Book Name:</label>

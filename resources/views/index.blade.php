@@ -29,10 +29,10 @@
             <td>{{$book->book_name}}</td>
             <td>{{$book->isbn_no}}</td>
             <td>{{$book->book_price}}</td>
-            <td><a href="{{ route('books.edit',$book->id)}}" class="btn btn-primary">Edit</a></td>
+            <td><a href="{{ route('crudlaravel.edit',$book->id)}}" class="btn btn-primary">Edit</a></td>
             <td>
-                <form action="{{ route('books.destroy', $book->id)}}" method="post">
-                  @csrf
+                <form action="{{ route('crudlaravel.destroy', $book->id)}}" method="post">
+                {{ csrf_field() }}
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">Delete</button>
                 </form>

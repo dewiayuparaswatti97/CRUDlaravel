@@ -20,9 +20,10 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ route('books.update', $book->id) }}">
+      <form method="post" action="{{ route('crudlaravel.update', $book->id) }}">
+      {{ csrf_field() }}
           <div class="form-group">
-              @csrf
+          
               @method('PATCH')
               <label for="name">Book Name:</label>
               <input type="text" class="form-control" name="book_name" value="{{$book->book_name}}"/>

@@ -44,7 +44,7 @@ class BookController extends Controller
         ]);
         $book = Book::create($validatedData);
 
-        return redirect('/books')->with('success', 'Book is successfully saved');
+        return redirect('/crudlaravel')->with('success', 'Book is successfully saved');
     }
 
     /**
@@ -87,7 +87,7 @@ class BookController extends Controller
         ]);
         Book::whereId($id)->update($validatedData);
 
-        return redirect('/books')->with('success', 'Book is successfully updated');
+        return redirect('/crudlaravel')->with('success', 'Book is successfully updated');
     }
 
     /**
@@ -101,6 +101,6 @@ class BookController extends Controller
         $book = Book::findOrFail($id);
         $book->delete();
 
-        return redirect('/books')->with('success', 'Book is successfully deleted');
+        return redirect('/crudlaravel')->with('success', 'Book is successfully deleted');
     }
 }
