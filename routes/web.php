@@ -5,3 +5,8 @@ Route::get('/', function () {
 });
 
 Route::resource('books', 'BookController');
+
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
+});

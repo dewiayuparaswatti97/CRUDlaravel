@@ -21,8 +21,8 @@
       </div><br />
     @endif
       <form method="post" action="{{ route('books.store') }}">
+      {{ csrf_field() }}
           <div class="form-group">
-              @csrf
               <label for="name">Book Name:</label>
               <input type="text" class="form-control" name="book_name"/>
           </div>
