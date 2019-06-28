@@ -4,6 +4,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('crudlaravel', 'BookController');
-
-
+Route::resource('crudlaravel', 'tokoController');
